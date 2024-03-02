@@ -1,4 +1,4 @@
-package com.projects.twitch.external;
+package com.projects.twitch.external.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

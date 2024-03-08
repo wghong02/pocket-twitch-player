@@ -1,3 +1,4 @@
+# docker-compose -f src/main/resources/docker-compose.yml up -d
 version: '3.8'
 
 services:
@@ -5,7 +6,7 @@ services:
     image: mysql:latest
     environment:
       MYSQL_ROOT_HOST: '%'
-      MTSQL_DATABASE: twitch
+      MYSQL_DATABASE: twitch
       MYSQL_ROOT_PASSWORD: secret
       TZ: UTC
     volumes:
@@ -14,4 +15,4 @@ services:
       - 3306:3306
 # permanent storage of data
 volumes:
-  mysql-llocal:
+  mysql-local:

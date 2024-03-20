@@ -8,6 +8,7 @@ import com.projects.twitch.external.model.Clip;
 import com.projects.twitch.external.model.Stream;
 import com.projects.twitch.favorite.FavoriteService;
 import com.projects.twitch.model.TypeGroupedItemList;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -72,7 +73,7 @@ public class RecommendationService {
         return resultItem;
     }
 
-
+    @Cacheable("recommend_items")
     public TypeGroupedItemList recommendItems(UserEntity userEntity) {
         List<String> gameIds;
         Set<String> exclusions = new HashSet<>();

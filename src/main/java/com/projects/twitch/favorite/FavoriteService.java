@@ -6,6 +6,7 @@ import com.projects.twitch.db.entity.FavoriteRecordEntity;
 import com.projects.twitch.db.entity.ItemEntity;
 import com.projects.twitch.db.entity.UserEntity;
 import com.projects.twitch.model.TypeGroupedItemList;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,7 +27,7 @@ public class FavoriteService {
         this.favoriteRecordRepository = favoriteRecordRepository;
     }
 
-
+    @CacheEvict(cacheNames = "recommend_items", key = "#user")
     @Transactional
     public void setFavoriteItem(UserEntity user, ItemEntity item) {
         ItemEntity persistedItem = itemRepository.findByTwitchId(item.twitchId());

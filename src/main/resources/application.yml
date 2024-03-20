@@ -1,4 +1,8 @@
 spring:
+  cache:
+    caffeine:
+      spec: expireAfterWrite=1m
+
   jackson:
     default-property-inclusion: non_null
   cloud:

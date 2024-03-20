@@ -4,6 +4,7 @@ import com.projects.twitch.external.model.Game;
 import com.projects.twitch.external.model.Video;
 import com.projects.twitch.external.model.Stream;
 import com.projects.twitch.external.model.Clip;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -21,11 +22,13 @@ public class TwitchService {
     }
 
 
+    @Cacheable("top_games")
     public List<Game> getTopGames() {
         return twitchApiClient.getTopGames().data();
     }
 
 
+    @Cacheable("games_by_name")
     public List<Game> getGames(String name) {
         return twitchApiClient.getGames(name).data();
     }
@@ -54,4 +57,5 @@ public class TwitchService {
         return topGameIds;
     }
 }
+
 

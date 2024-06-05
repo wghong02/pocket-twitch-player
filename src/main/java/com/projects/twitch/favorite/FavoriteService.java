@@ -41,7 +41,7 @@ public class FavoriteService {
         favoriteRecordRepository.save(favoriteRecord);
     }
 
-
+    @CacheEvict(cacheNames = "recommend_items", key = "#user")
     public void unsetFavoriteItem(UserEntity user, String twitchId) {
         ItemEntity item = itemRepository.findByTwitchId(twitchId);
         if (item != null) {

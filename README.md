@@ -6,4 +6,32 @@ Users can search for Twitch resources such as streams, videos, and clips on the 
 
 ## Demonstration
 
-![Home Page of the Application](demo/mainPage.png)
+This is the home page of the application.
+
+![Home Page](demo/mainPage.png)
+
+Different twitch resources are extracted from twitchAPI, including streams, videos and clips and recommended to all users:
+
+![Recommendations](demo/recommednations.png)
+
+Users have the options to register and login for better user experience:
+
+![Register](demo/register.png)
+![Login](demo/login.png)
+
+They can watch Twitch resources by each category:
+
+![Category](demo/categories.png)
+
+Search for categories more explicitly:
+
+![Search](demo/search.png)
+
+Set and view favorite resources:
+
+![setFavorite](demo/setFavorite.png)
+![seeFavorite](demo/seeFavorite.png)
+
+and get more personalized recommendations from viewed contents:
+
+![Personal Recommendations](demo/recom2.png)

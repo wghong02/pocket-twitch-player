@@ -12,7 +12,7 @@ This is the home page of the application.
 
 Different twitch resources are extracted from twitchAPI, including streams, videos and clips and recommended to all users:
 
-![Recommendations](demo/recommedations.png)
+![Recommendations](demo/recommendations.png)
 
 Users have the options to register and login for better user experience:
 
